@@ -47,10 +47,18 @@ policy "gcp-cis-7.9-kubernetes-ensure-container-optimized-osis-used-for-kubernet
 }
 
 # CIS 7.10
+# policy "gcp-cis-7.10-kubernetes-ensure-basic-authentication-is-disabled-on-kubernetes-engine-clusters" {
+#    source = "https://raw.githubusercontent.com/hashicorp/terraform-foundational-policies-library/master/cis/gcp/kubernetes/gcp-cis-7.10-kubernetes-ensure-basic-authentication-is-disabled-on-kubernetes-engine-clusters/gcp-cis-7.10-kubernetes-ensure-basic-authentication-is-disabled-on-kubernetes-engine-clusters.sentinel"
+#    enforcement_level = "advisory"
+#}
+
+# CIS 7.10 - rhall update
+
 policy "gcp-cis-7.10-kubernetes-ensure-basic-authentication-is-disabled-on-kubernetes-engine-clusters" {
-    source = "https://raw.githubusercontent.com/hashicorp/terraform-foundational-policies-library/master/cis/gcp/kubernetes/gcp-cis-7.10-kubernetes-ensure-basic-authentication-is-disabled-on-kubernetes-engine-clusters/gcp-cis-7.10-kubernetes-ensure-basic-authentication-is-disabled-on-kubernetes-engine-clusters.sentinel"
+    source = "https://raw.githubusercontent.com/hashicorp/terraform-foundational-policies-library/hcrhall/update-gcp-cis-7.10/cis/gcp/kubernetes/gcp-cis-7.10-kubernetes-ensure-basic-authentication-is-disabled-on-kubernetes-engine-clusters/gcp-cis-7.10-kubernetes-ensure-basic-authentication-is-disabled-on-kubernetes-engine-clusters.sentinel"
     enforcement_level = "advisory"
 }
+
 
 # CIS 7.11
 policy "gcp-cis-7.11-kubernetes-ensure-network-policy-is-enabled-on-kubernetes-engine-clusters" {
